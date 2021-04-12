@@ -1,0 +1,759 @@
+/*
+signature color
+주황 : #ff4f00
+네이비 : #233554
+*/
+html, body {
+max-width: 100%;
+overflow-x: hidden;
+}
+/* font reset */
+h1,h2,h3,h4,h5, a,p {
+    font-family: "Poppins"; color:#233554;
+}
+
+li {list-style:none;}
+a {text-decoration: none;}
+
+/* layout */
+/*#contents > section{line-height: 100vh;}line-height로 가운데 오게 한다고 함*/
+#contents {}
+#main {height: 100vh; background: #fefefe;}
+#about {height: 100vh; background: #fefefe;padding-top: 10vw;}/*about,skill*/
+#skills {height: 100vh; background: #fefefe;padding-top: 10vw;}
+#experience {height: 100vh; background: #fefefe;padding-top: 10vw;}
+#contact {height: 100vh; background: #fefefe;}
+#footer{background: #fefefe;}
+
+/* nav */
+#nav {position: fixed; left: 0; top: 0px; width: 100%; z-index: 1000; background-color:  rgba(90,95,100,0); }
+#nav.on {position: fixed; top: -61px;}
+#nav h1 {float: left; color: #fefefe; font-size: 40px; padding: 5px 5px 5px 15px;  }
+#nav .menu {float: right; padding-right: 10px; }
+#nav .menu li {display: inline; }
+#nav .menu li a {display: inline-block; padding: 20px 15px; color: #233554; text-transform: capitalize;}
+#nav .menu li.active a {color: #ff4f00; font-weight: bold;}
+#nav .mNav {display: none; position: absolute; top: 7px; right: 10px; width: 65px; height: 45px; cursor: pointer;}
+
+/* icon-menu */
+.icon-wrap {padding-left: 10px;}
+.icon-wrap .icon, 
+.icon-wrap .icon:before, 
+.icon-wrap .icon:after {width: 45px; height: 4px; background: #233554;}
+.icon-wrap .icon {position: relative; margin-top:20px;}
+.icon-wrap .icon:before {content:'';position: absolute; left: 0; bottom: 10px; }
+.icon-wrap .icon:after {content:''; position: absolute; left: 0; top: 10px;}
+
+/* container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* sec1 */
+
+.sec1 .mText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.sec1 .mText span {
+    font-size: 8vw;
+    line-height: 7.5vw;
+    font-family: "Poppins";
+    font-weight: 800;
+    color: #233554;
+    white-space: nowrap;
+    font-style: italic;
+    letter-spacing: -2px;
+    display: inline-block;
+}
+.sec1 .mText span:nth-child(1){padding-left: 5vw;}
+.sec1 .mText span:nth-child(2){padding-right: 14vw;}
+.sec1 .mText span:nth-child(3){/*글자 테두리*/
+    -webkit-text-stroke-width: 0.1vw;
+    -webkit-text-stroke-color: #233554;
+    -webkit-text-fill-color: rgba(0,0,0,0);
+    margin-left: 35vw;
+    position: relative;
+}
+.sec1 .mText span:nth-child(3):before {/*Portfolio website CODING*/
+    content: 'Portfolio website CODING';
+    position: absolute; 
+    left: -20vw; top: 50%; 
+    transform: translateY(-50%);
+    font-size: 20px;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-fill-color: #233554;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.sec1 .mText span:nth-child(4){
+    -webkit-text-stroke-width: 0.1vw;
+    -webkit-text-stroke-color: #233554;
+    -webkit-text-fill-color: rgba(0,0,0,0);
+}
+
+/* About */
+.about {margin-top: -100px;}
+.about h3 span {font-size:3vw; font-weight: bold; color : #233554;letter-spacing: 0.04em;display: inline-block;padding-bottom: 4vw;}
+/*
+.sec2 .about {
+    text-align: center;
+}
+*/
+.about {margin-top:40px;}
+.about img{width: 300px; height: 300px;display:inline-block;}
+.about .cont {text-align: center;float:right;display:flex;flex-direction: column;justify-content: center;align-items:center;}
+.about p {font-size: 1.16vw; font-weight: 400;width: 500px; height: 180px; line-height:220%;padding-top: 5vw;text-align: left;}/*position: absolute; left: 470px;*/
+.about p span {font-weight: bold; color:#ff4f00;}
+.about p span.hello {font-size: 1.5vw; font-weight: bolder;color:#233554;}
+.about a{display:inline-block; font-size: 20px; font-weight: 500;border:1px solid #303030; padding:13px;width: 200px;height:20px;border-radius:30px 30px 30px 30px;text-align: center;left:470px;top:350px;letter-spacing: 0.04em;}
+
+/* 글자 색없이 테두리만 나오는 효과
+.sec2 h3 span:nth-child(1) {
+    padding-right:1vw;
+    -webkit-text-stroke-width: 0.1vw;
+    -webkit-text-stroke-color: #303030;
+    -webkit-text-fill-color: rgba(0,0,0,0);
+    
+}
+*/
+/* Skills */
+.skills{margin-top: 40px;}
+.skills h3 span {font-size:3vw; font-weight: bold; color : #233554;letter-spacing: 0.04em;display: inline-block;padding-bottom: 4vw;}
+.skillset {
+    display: flex;
+    flex-wrap: wrap;
+}
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    margin: calc(0.5rem + 1.5vw);
+}
+.skillset .Express {width: 150px;height: 70px;}
+.skills img {width: 150px;height: 150px;display:inline-block;}
+
+/*인태's 로고 아이콘
+.skill-item span {
+    display: block;
+    width: calc(3rem + 6vw);
+    height: calc(3rem + 6vw);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.sec2 .skills .skillset .HTML span {
+    background-image: url('assets/img/html.png');
+}
+*/
+/*.sec2 .skills .cont h3{font-weight: bold; font-size: 5vw;}*/
+
+/*.sec2 .second .cont a{display:inline-block; border:1px solid #303030; padding:10px 20px;width: 130px;border-radius:20px 20px 20px 20px;text-align: center;}*/
+
+
+
+/* Experience(Career, Education) */
+.experience {
+/*    padding-top:60px;*/
+    height: 100vh;
+}
+.experience ul li{padding-bottom: 1vw;}
+/*.sec3 span {display: inline-block;}*/
+.experience h3 span {font-size:3vw; font-weight: bold; color : #233554;letter-spacing: 0.04em;display: inline-block;padding-bottom: 2vw;}
+.experience h4 span{font-size:1.5vw; font-weight: 600;display: inline-block;padding-bottom: 1vw;}
+.experience h4 span:nth-child(3) {display: block;}
+.experience .tit {padding-bottom: 1vw;}
+/*.sec3 .tit .period {font-style: italic;}*/
+.experience .career .cont ul {
+    color:#233554;
+    font-family: 'Noto Sans KR', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
+    padding-left: 3vw;
+}
+.experience .career .cont ul li {
+     list-style-type: square;
+    
+}
+
+.experience .cont {padding-bottom: 2vw;}
+
+.experience li.work {margin-right: 10px;}
+.experience li.work a{position:relative;width: 220px;font-size: 25px;color:#233554;padding-left:450px;display:inline-block;}
+.experience li.work a:before{
+    content:'';
+    position:absolute;
+    top: 5px;left: 420px;
+    width: 18px;height: 18px;
+    background-color: #2997D8;
+    border-radius:50%;
+}
+.experience li.education {margin-right: 0;}/*row여백 공간만 적용되도록*/
+.experience li.education a{ font-weight: 300; width: 160px;/*background-color: #3a0e6a;*/font-size: 25px;color:#303030;display:inline-block;}
+.experience > ul > li > div {padding-left: 150px;}
+/*
+.sec3 .sea{margin-top: 70px;}
+.sec3 .sea .left {position:relative;}
+.sec3 .sea .left h2 {position:absolute;font-weight: 400;line-height:150%;text-align: right;padding-left: 45px;}
+.sec3 .sea .left h2:after {
+    content:'';
+    position:absolute;
+    top: 5px;left: 470px;
+    width: 18px;height: 18px;
+    background-color: #303030;
+    border-radius:50%;
+}
+.sec3 .sea .left span:nth-child(1){font-size: 22px;}
+.sec3 .sea .left span:nth-child(2){font-style: italic;}
+.sec3 .sea p{display:inline-block;padding-top: 100px;position:absolute; height: 400px;width: 402px; left:110%; top:0vh;font-size: 18px;display:inline-block;line-height:150%;text-align: left;}
+.sec3 .sea p:before {
+    content:'';
+    position:absolute;
+    right:126.5%; top: 20%;
+    border:2px solid #303030;height: 480px;
+    background-color: #303030;
+}
+
+.sec3 .mix{padding-top:470px;}
+.sec3 .mix .left {position:relative;}
+.sec3 .mix .left h2 {position:absolute;font-weight: 400;line-height:150%;text-align: right;padding-left: 45px;}
+.sec3 .mix .left h2:after {
+    content:'';
+    position:absolute;
+    top: 5px;left: 470px;
+    width: 18px;height: 18px;
+    background-color: #303030;
+    border-radius:50%;
+}
+.sec3 .mix .left span:nth-child(1){font-size: 22px;}
+.sec3 .mix .left span:nth-child(2){font-style: italic;}
+.sec3 .mix p{display:inline-block;padding-top: 100px;position:absolute; height: 400px;width: 402px; left:110%; top:60vh;font-size: 18px;display:inline-block;line-height:150%;text-align: left;}
+*/
+
+/* sec4 Contact */
+.contact {
+    padding-left:100px;
+    height: 100vh;
+}
+.contact .mText {
+    /*position: absolute;*/
+    /*left: 70%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;*/
+    padding-top : 200px;
+}
+.contact .mText span {
+    text-align: center;
+    font-size: 6.3vw;
+    line-height: 7.5vw;
+    font-family: "Poppins";
+    font-weight: 800;
+    color: #233554;
+    white-space: nowrap;
+    letter-spacing: -2px;
+    display: inline-block;
+}
+.contact .mText span:nth-child(1){
+/*    font-size: 5.5vw;*/
+    -webkit-text-stroke-width: 0.1vw;
+    -webkit-text-stroke-color: #233554;
+    -webkit-text-fill-color: rgba(0,0,0,0);
+}
+.contact .mText span:nth-child(2){font-size: 3.5vw;}
+.contact input{
+    cursor: pointer; font-size: 2.5vw;
+    width:15vw;height:7vw;border-radius: 10px;
+    font-weight: bold;
+    background-color: #fff;
+    border : 0.3vw solid #ff4f00;
+    
+}
+.contact input:hover{
+    color:#ff4f00;background-color: rgba(255,79,0,0.3);}
+.contact{position: relative;}
+.contact span:nth-child(3) {position: absolute;left:40%;top:45%; display: block;}
+/*
+.sec4 .mText span:nth-child(2){
+    -webkit-text-stroke-width: 0.1vw;
+    -webkit-text-stroke-color: #303030;
+    margin-left: 35vw;
+    position: relative;
+}
+*/
+/*
+.sec4 .mText span:nth-child(2):before {
+    content: 'Best Junior Engineer of 2020' ;
+    position: absolute; 
+    left: -20vw; top: 50%; 
+    transform: translateY(-50%);
+    font-size: 20px;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-fill-color: #303030;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+*/
+/*.sec4 {font-size: 35px;margin-left:100px;}*/
+
+
+
+/* section5 web site projects*/
+.sec5 {
+    height: 100vh;
+    position:relative;
+}
+.sec5 .mText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.sec5 .mText span {
+    /*모든 글자 스타일 굵고 no fill*/
+    -webkit-text-stroke-width: 0.1vw;
+    -webkit-text-stroke-color: #303030;
+    -webkit-text-fill-color: rgba(0,0,0,0);
+    font-size: 4vw;
+    line-height: 6vw;
+    font-weight: 800;
+    color: #303030;
+    white-space: nowrap;
+    font-style: italic;
+    letter-spacing: -2px;
+    display: inline-block;
+}
+/*standard web site*/
+.sec5 .mText span:nth-child(1){padding-right: 14vw;position:relative;}
+.sec5 .mText span:nth-child(1):before {
+    content: 'Portfolio website CODING';
+    position: absolute; 
+    left: -14vw; top: 50%; 
+    transform: translateY(-50%);
+    font-size: 0.8vw;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-fill-color: #303030;
+    font-style: normal;
+    letter-spacing: 0.04em;
+    font-weight: 600; font-style:italic;
+    text-transform: uppercase;
+}
+/*responsive web site*/
+.sec5 .mText span:nth-child(2){padding-left: 15vw;position:relative;}
+.sec5 .mText span:nth-child(2):after {
+    content: 'WITH MEDIA QUERY';
+    position: absolute; 
+    left: 55vw; top: 50%; 
+    transform: translateY(-50%);
+    font-size: 0.8vw;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-fill-color: #303030;
+    font-style: normal;
+    letter-spacing: 0.04em;
+    font-weight: 600; font-style:italic;
+    text-transform: uppercase;
+}
+/*megabox web site*/
+.sec5 .mText span:nth-child(3){padding-right: 14vw;display:block;position:relative;}
+.sec5 .mText span:nth-child(3):after {
+    content: 'USING PHOTOSHOP';
+    position: absolute; 
+    left: 39vw; top: 50%; 
+    transform: translateY(-50%);
+    font-size: 0.8vw;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-fill-color: #303030;
+    font-style: normal;
+    letter-spacing: 0.04em;
+    font-weight: 600; font-style:italic;
+    text-transform: uppercase;
+}
+/*mobile apple music*/
+.sec5 .mText span:nth-child(4){padding-left: 15vw;display:block;position:relative;}
+.sec5 .mText span:nth-child(4):after {
+    content: 'Portfolio website CODING';
+    position: absolute; 
+    left: 55vw; top: 50%; 
+    transform: translateY(-50%);
+    font-size: 0.8vw;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-fill-color: #303030;
+    font-style: normal;
+    letter-spacing: 0.04em;
+    font-weight: 600; font-style:italic;
+    text-transform: uppercase;
+}
+/*css animation*/
+.sec5 .mText span:nth-child(5){padding-left: 25vw;display:block;position:relative;}
+.sec5 .mText span:nth-child(5):before {
+    content: 'Portfolio website CODING';
+    position: absolute; 
+    left: 11vw; top: 50%; 
+    transform: translateY(-50%);
+    font-size: 0.8vw;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-fill-color: #303030;
+    font-style: normal;
+    letter-spacing: 0.04em;
+    font-weight: 600; font-style:italic;
+    text-transform: uppercase;
+}
+.sec5 .mText span:nth-child(6) {position:relative;}
+.sec5 .mText span:nth-child(6):after {
+    content: 'Portfolio website CODING';
+    position: absolute; 
+    left: 39vw; top: 50%; 
+    transform: translateY(-50%);
+    font-size: 0.8vw;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-fill-color: #303030;
+    font-style: normal;
+    letter-spacing: 0.04em;
+    font-weight: 600; font-style:italic;
+    text-transform: uppercase;
+}
+/*
+/* section6 web standard 
+.sec6 {}
+.sec6 .mockup {margin: 0 auto;width: 1100px; height: 300vh; background-color:#fff;text-align: center; border-radius:5px 5px 5px 5px;}
+.sec6 .mockup .mockup_top { height: 20px;background-color: #303030;border-radius:5px 5px 0px 0px;}
+.sec6 .mockup .mockup_top .circle_wrap {padding:8px;}
+.sec6 .mockup .mockup_top .circle_wrap .circle {
+    float:left;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 5px;
+    display: inline-block;
+}
+.sec6 .mockup .mockup_cont .main img {width: 1000px;height: 550px; padding-bottom: 100px; border-bottom: 1px solid #c4c4c4;margin-top: 40px;margin-bottom:70px;}
+.sec6 .mockup .mockup_cont .feature {}
+.sec6 .mockup .mockup_cont .feature .left {width:700px; height: 350px;padding-left:100px;padding-right:20px;}
+.sec6 .mockup .mockup_cont .feature .left .first {float:left;width: 250px; height: 150px;display:inline-block;margin-right: 53px;}
+.sec6 .mockup .mockup_cont .feature .left .first img{width: 30px; height: 30px;}
+.sec6 .mockup .mockup_cont .feature .left .first h3 {font-size: 18px;padding: 10px; padding-left:0;font-weight: 550;}
+.sec6 .mockup .mockup_cont .feature .left .first p {font-size: 15px; font-weight: 100; letter-spacing: 0.02em;text-align: left;line-height:120%;}
+.sec6 .mockup .mockup_cont .feature .left .second {float:left;width: 250px; height: 150px;display:inline-block;}
+.sec6 .mockup .mockup_cont .feature .left .second img{width: 30px; height: 30px;}
+.sec6 .mockup .mockup_cont .feature .left .second h3 {font-size: 18px;padding: 10px; padding-left:0;font-weight: 550;}
+.sec6 .mockup .mockup_cont .feature .left .second p {font-size: 15px; font-weight: 100; letter-spacing: 0.02em;text-align: left;line-height:120%;}
+.sec6 .mockup .mockup_cont .feature .left .third {float:left;width: 250px; height: 150px;display:inline-block;margin-right: 53px;}
+.sec6 .mockup .mockup_cont .feature .left .third img{width: 30px; height: 30px;}
+.sec6 .mockup .mockup_cont .feature .left .third h3 {font-size: 18px;padding: 10px; padding-left:0;font-weight: 550;}
+.sec6 .mockup .mockup_cont .feature .left .third p {font-size: 15px; font-weight: 100; letter-spacing: 0.02em;text-align: left;line-height:120%;}
+.sec6 .mockup .mockup_cont .feature .left .forth {float:left;width: 250px; height: 150px;display:inline-block;}
+.sec6 .mockup .mockup_cont .feature .left .forth img{width: 30px; height: 30px;}
+.sec6 .mockup .mockup_cont .feature .left .forth h3 {font-size: 18px;padding: 10px; padding-left:0;font-weight: 550;}
+.sec6 .mockup .mockup_cont .feature .left .forth p {font-size: 15px; font-weight: 100; letter-spacing: 0.02em;text-align: left;line-height:120%;}
+.sec6 .mockup .mockup_cont .feature {position:relative;}
+.sec6 .mockup .mockup_cont .feature .right svg {
+    padding-left: 680px;
+    position:absolute;
+    top: -5vh;left: 0;
+    display:inline-block;
+    width: 40vh;
+    height: 40vh;
+    fill: #303030;
+}
+.sec6 .mockup .mockup_cont .feature .right text {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+.sec6 .mockup .mockup_cont .feature .right textPath {
+    white-space: inherit;
+}
+.sec6 .mockup .mockup_cont .arrow_down .da_icon {width: 50px;height: 50px;margin-bottom: 40px;}
+.sec6 .mockup .mockup_cont .coding {width: 100vh;height: 50vh; margin: 0 auto;}
+.sec6 .mockup .mockup_cont .coding ul {padding-left:20px;}
+.sec6 .mockup .mockup_cont .coding ul li {text-align: center;float:left; width: 180px;display:inline-block;text-align: center;margin-right: 10px;}
+.sec6 .mockup .mockup_cont .coding ul li:nth-child(1) {border-bottom:1px solid #303030; }
+.sec6 .mockup .mockup_cont .coding ul li a {text-align: center; width: 220px;font-size: 17px; letter-spacing: 0.04em;font-weight: 400; color:#303030;display:inline-block;padding-top: 20px;padding-bottom:  20px;}
+
+
+.sec6 .mockup .mockup_cont .coding .tab_cont pre {
+    
+     display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+    width: 100vh;height: 50vh; 
+    /*background-color: lightgray;영역확인하기 위해 임시로
+}
+*/
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+    height: 494px;
+}
+/*
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: #303030;
+}
+*/
+pre[class*="language-"] {
+    padding: 1em;
+    overflow: auto;
+}
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+code[class*="language-"], pre[class*="language-"] {
+    color: #303030;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+::-webkit-scrollbar {스크롤바 전체
+    width: 10px;
+    height: 12px;
+}
+::-webkit-scrollbar-corner {
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb {/*스크롤바 막대*/
+    background-color: #ff4f00;
+}
+::-webkit-scrollbar-track {/*스크롤 막대 외부*/
+    background-color: lightblue;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+}
+
+/* Text Animation */
+#contents > section h1,h2,h3,a,p,span,img {transition: all 0.4s ease-in-out;}
+/*
+#section2 h3,h4{opacity: 0;transform: translate(0,-20%);}
+#section2 a {display:none;transform: translate(0,-20%);}
+#section2 p,span {display:none;transform: translate(0,-20%);}*/
+
+#section3 h1{opacity: 0;transform: translate(0,-20%);}
+#section4 li.work{display: none;transform: translate(0,-20%);}
+#section5 h2{opacity: 0;}
+#section6 .mockup{display: none;transform: translate(0,-20%);}
+
+/*show : 보이게
+#section2.show h3,h4 {opacity: 1;}
+#section2 a {display:block;}
+#section2.show p,span {display:block;}*/
+
+#section3.show h1{opacity: 1;}
+#section4.show li.work{display:block;}
+#section5.show h2{opacity: 1;}
+#section6.show .mockup{display: block;}
+
+/* text animation */
+/*
+#contents > section h1,h2,h3,a,p,span {transition: all 0.6s ease-in-out;}
+#section1 h2 {opacity: 0; transform: translate(0,0)}
+#section2 h2 {opacity: 0; transform: translate(0,-20%)}
+#section3 h2 {opacity: 0; transform: translate(-20%,0)}
+#section4 h2 {opacity: 0; transform: translate(10%,0)}
+#section5 h2 {opacity: 0; transform: rotate(45deg)}
+#section6 h2 {opacity: 0; transform: skew(90deg)}
+#contents > section.show h3 {transform: none;}일단 learn more, about 부분 심
+#section1.show h2 {opacity: 1;}
+#section2.show h2 {opacity: 1;}
+#section3.show h2 {opacity: 1;}
+#section4.show h2 {opacity: 1;}
+#section5.show h2 {opacity: 1;}
+#section6.show h2 {opacity: 1;}
+*/
+
+
+/*
+.sec4 li {position:relative;display:inline-block;text-align: center;}
+.sec4 li.work {margin-right: 10px;}
+.sec4 li.work a{position:relative;width: 220px;font-size: 25px;color:#303030;padding-left:450px;display:inline-block;}
+.sec4 li.work a:before{
+    content:'';
+    position:absolute;
+    top: 5px;left: 420px;
+    width: 18px;height: 18px;
+    background-color: #2997D8;
+    border-radius:50%;
+}
+.sec4 li.education {margin-right: 0;}row여백 공간만 적용되도록
+.sec4 li.education a{ font-weight: 300; width: 160px;font-size: 25px;color:#303030;display:inline-block;}
+*/
+
+/* fa 아래 화살표 
+.sec6 .mockup .mockup_cont .arrow_down .arrow_icon {
+    font-size: 50px;
+}
+.sec6 .mockup .mockup_cont .arrow_down .arrow_icon .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.sec6 .mockup .mockup_cont .arrow_down .arrow_icon i {
+    font-size: 30px;
+    color: #303030;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 500;
+}
+.sec6 .mockup .mockup_cont .arrow_down .arrow_icon .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*/
+
+/*
+svg {
+    display: block;
+    width: 100%;
+    height: 300px;
+    letter-spacing: 0.52em;
+
+    text {
+        transform-origin: 50% 50%;
+        animation: rotate 10s linear infinite;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+*/
+
+
+/*
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbdbdb;
+}
+*/
+
+
+
+/*다음 탭에
+.sec4 .edu{padding-top:300px;}
+.sec4 .edu .left {position:relative;}
+.sec4 .edu .left h2 {position:absolute;font-weight: 400;line-height:150%;text-align: right;padding-left: 100px;}
+.sec4 .edu .left span:nth-child(1){font-size: 25px;}
+.sec4 .edu .left span:nth-child(2){font-style: italic;}
+.sec4 .edu p{display:inline-block;position:absolute; height: 400px;width: 402px; left:60%; top:680vh;font-size: 18px;display:inline-block;line-height:150%;}*/
+
+/* 푸터 */
+.footer {padding: 25px 0; text-align: center;}
+.footer ul {margin-bottom: 20px;}
+.footer li {position: relative; display: inline; padding: 0 7px 0 10px;}/*float:left해도 되지만 그렇게 하면 text-align:center 안 먹히기 떄문에 dp:inline으로 해준다!*/
+.footer li:before {content: ''; width: 1px; height: 12px; background: #ccc; position: absolute; left: 0; top: 2px;}/*가상의 요소를 만들어서 바 표시를 해줄 수 있다*/
+.footer li:first-child:before {width: 0; height: 0;}
+.footer .w3c {margin-top: 15px;}
+/* media */
+@media (max-width: 1400px){
+    .sec1 .mText span:nth-child(3):before {font-size:18px; }
+}
+@media (max-width: 1280px){
+    .sec1 .mText span:nth-child(3):before {font-size:15px; }
+}
+@media (max-width: 1075px){
+    .sec1 .mText span:nth-child(3):before {font-size:13px; }
+    .about > div {padding-left: 5vw;}
+    .skills > div {padding-left: 5vw;}
+    .experience > div {padding-left: 5vw;}
+/*
+    .career > div {padding-left: 5vw;}
+    .education > div {padding-left: 5vw;}
+*/
+}
+@media (max-width: 1000px){
+    .sec1 .mText span:nth-child(3):before {display: none;}
+/*
+    .about {position: relative;}
+    .about p{position: absolute;left: 40%;top: 30%;}
+*/
+}
+@media (max-width: 890px){
+    .about img{width: 270px;height: 270px;}
+}
+@media (max-width: 845px){
+    .about img{width: 250px;height: 250px;}
+    .experience h4 span {font-size: 2vw;}
+}
+@media (max-width: 806px){
+    #nav .menu {display: none;}
+    #nav .mNav {display: block;}
+    
+    #nav h1 {width: 100%;}
+    #nav .menu {float: none; text-align: center;padding-right: 0;}
+    #nav .menu li {width: 100%; display: inline-block;}
+    #nav .menu li.active {background: rgba(255,255,255,0.3);}
+    
+/*    #contents > section p {font-size: 2vw; font-weight: bold;}*/
+    #contents .cont {text-align: center;}
+    .about > div {text-align: center;}
+    .about .tit{display: block;}
+    .about {position: relative;}
+    .about .cont{position: absolute;left: 20%;top: 100%;}
+    .about p {text-align: center;display:block;}
+    .skills > div {text-align: center;}
+    .experience > div {text-align: center;}
+    .experience .career .cont ul li {font-size: 1.8vw;text-align: left;}
+    .experience ul {padding-left: 20px;}
+    .contact > h1 > span {text-align: center;}
+    
+}
+@media (max-width:740px) {
+        .about p{font-size: 1.5vw;}
+
+}
+@media (max-width:598px) {
+    .skills img {width: 100px;height: 100px;display:inline-block;}
+    .about p{font-size: 2vw;}
+
+}
+@media (max-width:500px) {
+    .about {position: relative;}
+    .about > div {padding-left: 0;}
+    .about img {width: 180px;height: 180px;}
+    .about .cont {padding-left: -20px;}
+    .about p{display: inline-block;width: 400px;text-align: left; position: absolute; top:100%;left: -100%; font-size: 2vw;}
+    #skills {padding-top: 0;}
+}
